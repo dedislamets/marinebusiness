@@ -1,0 +1,11 @@
+[07-Apr-2018 14:08:55 Asia/Jakarta] PHP Fatal error:  Call to undefined function encrypt_uri() in /home/mart4343/public_html/devel/application/views/ship/index.php on line 675
+[07-Apr-2018 14:11:37 Asia/Jakarta] PHP Fatal error:  Call to undefined function encrypt_uri() in /home/mart4343/public_html/devel/application/views/ship/index.php on line 675
+[07-Apr-2018 14:19:30 Asia/Jakarta] PHP Fatal error:  Call to undefined function encrypt_uri() in /home/mart4343/public_html/devel/application/views/ship/index.php on line 675
+[07-Apr-2018 14:20:50 Asia/Jakarta] PHP Fatal error:  Call to undefined function encrypt_uri() in /home/mart4343/public_html/devel/application/views/ship/index.php on line 675
+[07-Apr-2018 14:21:04 Asia/Jakarta] PHP Fatal error:  Call to undefined function encrypt_uri() in /home/mart4343/public_html/devel/application/views/ship/index.php on line 675
+[07-Apr-2018 14:32:49 Asia/Jakarta] PHP Fatal error:  Call to undefined function encrypt_uri() in /home/mart4343/public_html/devel/application/views/ship/index.php on line 675
+[07-Apr-2018 14:33:42 Asia/Jakarta] PHP Fatal error:  Call to undefined function encrypt_uri() in /home/mart4343/public_html/devel/application/views/ship/index.php on line 675
+[07-Apr-2018 14:34:40 Asia/Jakarta] PHP Fatal error:  Call to undefined function encrypt_uri() in /home/mart4343/public_html/devel/application/views/ship/index.php on line 675
+[07-Apr-2018 14:35:01 Asia/Jakarta] PHP Fatal error:  Call to undefined function encrypt_uri() in /home/mart4343/public_html/devel/application/views/ship/index.php on line 675
+[07-Apr-2018 14:48:38 Asia/Jakarta] PHP Fatal error:  Call to undefined function encrypt_uri() in /home/mart4343/public_html/devel/application/controllers/Setting.php on line 680
+[10-Apr-2018 11:03:48 Asia/Jakarta] PHP Fatal error:  Call to a member function result() on boolean in /home/mart4343/public_html/devel/application/controllers/Home.php on line 14
