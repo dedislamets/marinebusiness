@@ -114,7 +114,7 @@ class Pengaturan extends CI_Model {
               
         $config['send_multipart'] = FALSE;
         
-        
+        vdebug($config);
         $ci->email->initialize($config);
         if($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '127.0.0.1' || $_SERVER['SERVER_NAME'] == '::1')
         {
