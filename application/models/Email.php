@@ -47,17 +47,26 @@ class Email extends CI_Model {
         $mail = new PHPMailer();                              // Passing `true` enables exceptions
         try {
             //Server settings
-            //$mail->SMTPDebug = 3;                                 // Enable verbose debug output
-            $mail->isSMTP();                            
-            $mail->Host = 'ssl://mail.marinebusiness.co.id';  // Specify main and backup SMTP servers
-            $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'cs@marinebusiness.co.id';                 // SMTP username
-            $mail->Password = 'admin123^';                           // SMTP password
+            $mail->SMTPDebug = 3;                                 // Enable verbose debug output
+            $mail->isSMTP();  
+            $mail->SMTPAuth = true; 
             $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-            $mail->Port = 465;                                    // TCP port to connect to
+            $mail->Port = 465; 
+            if($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '127.0.0.1' || $_SERVER['SERVER_NAME'] == '::1')
+            {
+                $mail->Host = 'ssl://smtp.gmail.com';  // Specify main and backup SMTP servers
+                $mail->Username = 'dedi.slamets@gmail.com';                 // SMTP username
+                $mail->Password = 'wallpapers'; 
+                $mail->setFrom('dedi.slamets@gmail.com', 'Marine Business');                         
+            }else{               
+                $mail->Host = 'ssl://mail.marinebusiness.co.id';  // Specify main and backup SMTP servers
+                $mail->Username = 'cs@marinebusiness.co.id';                 // SMTP username
+                $mail->Password = 'admin123^'; 
+                $mail->setFrom('cs@marinebusiness.co.id', 'Marine Business');
+            }                                  
 
             //Recipients
-            $mail->setFrom('cs@marinebusiness.co.id', 'Marine Business');
+            
             $mail->addAddress($email);     // Add a recipient                        
             //$mail->addReplyTo('info@example.com', 'Information');
             //$mail->addCC('cc@example.com');

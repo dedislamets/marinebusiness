@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $config['base_url'] = 'http://devel.marinebusiness.co.id/';
 // $config['base_url'] = 'http://172.20.10.14:8080/marinebusiness/';
 // $config['base_url'] = 'http://192.168.43.70:8080/marinebusiness/';
-$config['base_url'] = 'http://localhost:8080/marinebusiness/';
+$config['base_url'] = 'http://localhost:8080/marinebusiness-git/';
 
 /*
 |--------------------------------------------------------------------------

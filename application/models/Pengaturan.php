@@ -13,6 +13,38 @@ class Pengaturan extends CI_Model {
         $query = $this->db->query("SELECT * FROM t_registrasi where email='".$email."'");
         return $query->result();        
     }
+    function getCalendar($email='')
+    {        
+        $query = $this->db->query("SELECT * FROM t_calendar");
+        return $query->result();        
+    }
+    function getPengajuan($email='')
+    {        
+        $query = $this->db->query("SELECT * FROM t_pengajuan where email='".$email."' and status='Waiting Verification'");
+        return $query->result();        
+    }
+    function getPengajuan_2()
+    {        
+        $email= $this->session->userdata('email');
+        $query = $this->db->get_where('t_registrasi',array('email'=>$email))->result();
+
+        $query = $this->db->query("SELECT * FROM t_pengajuan where id_seller='".$query[0]->id."' and status='Sign 1'");
+        return $query->result();        
+    }
+    function getMeetSaya()
+    {        
+        $email= $this->session->userdata('email');
+        $query = $this->db->query("SELECT * FROM t_pengajuan where email='".$email."' and status='Sign 2'");
+        return $query->result();        
+    }
+    function getMeetClient()
+    {        
+        $email= $this->session->userdata('email');
+        $query = $this->db->get_where('t_registrasi',array('email'=>$email))->result();
+
+        $query = $this->db->query("SELECT * FROM t_pengajuan where id_seller='".$query[0]->id."' and status='Sign 2'");
+        return $query->result();        
+    }
     function getAllGroups()
     {        
         $query = $this->db->query('SELECT type FROM t_sertifikat_mst group by type order by type asc');
@@ -60,11 +92,23 @@ class Pengaturan extends CI_Model {
         $ci = get_instance();
         
         $config['protocol'] = "smtp";
-        $config['smtp_host'] = "ssl://mail.marinebusiness.co.id";
+        if($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '127.0.0.1' || $_SERVER['SERVER_NAME'] == '::1')
+        {
+            $config['smtp_host'] = "ssl://smtp.gmail.com";
+            $config['smtp_user'] = "dedi.slamets@gmail.com";
+            $config['smtp_pass'] = "wallpapers";
+            $config['charset']   = 'iso-8859-1';
+
+        }else{
+            $config['smtp_host'] = "ssl://mail.marinebusiness.co.id";
+            $config['smtp_user'] = "cs@marinebusiness.co.id";
+            $config['smtp_pass'] = "admin123^";
+            $config['charset'] = 'utf-8';
+        }
+        
         $config['smtp_port'] = "465";
-        $config['smtp_user'] = "cs@marinebusiness.co.id";
-        $config['smtp_pass'] = "admin123^";
-        $config['charset'] = 'utf-8';
+        
+        
         $config['mailtype'] = "html";
         $config['newline'] = "\r\n";
               
@@ -72,12 +116,18 @@ class Pengaturan extends CI_Model {
         
         
         $ci->email->initialize($config);
- 
-        $ci->email->from('cs@marinebusiness.co.id', 'Marine Business');
+        if($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '127.0.0.1' || $_SERVER['SERVER_NAME'] == '::1')
+        {
+            $ci->email->from('dedi.slamets@gmail.com', 'Marine Business');
+        }else{
+            $ci->email->from('cs@marinebusiness.co.id', 'Marine Business');
+        }
+        
         $list = array($email);
         $ci->email->to($list);
         $ci->email->subject('Verifikasi Akun Anda Sekarang');
         $ci->email->message('isi email');
+        $this->email->set_newline("\r\n");
         if ($this->email->send()) {
             // echo 'Email sent.';
         } else {

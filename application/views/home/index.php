@@ -86,7 +86,7 @@
     <!-- slide 04 start -->
     
 </div><!-- #masterslider end -->
-<div class="page-content parallax parallax01 mb-30">
+<div class="page-content parallax parallax01">
     <div class="container">        
          <div id="y-header_form">
           <div class="container wow fadeInUp" data-wow-duration="2.5s">
@@ -113,7 +113,7 @@
 <div class="page-content">
   <div class="container-fluid">
       <div class="row">
-          <div class="col-md-12" style="margin-bottom: 15px;">
+          <div class="col-md-12" style="margin-top: 15px;">
               <div class="custom-heading02">
                   <h2>Our Services</h2>
                   <p>
@@ -346,24 +346,6 @@
               <div class="app-download"></div>
                 <div>&nbsp;</div>
             </div>
-        </div><!-- .row end -->
-    </div><!-- .container end -->
-</div>
-<div class="page-content custom-bkg bkg-grey">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="carousel-container">
-                    <div id="client-carousel" class="owl-carousel owl-carousel-navigation">
-                        <div class="owl-item"><img src="<?= base_url(); ?>assets/img/pics/client01.png" alt=""/></div>
-                        <div class="owl-item"><img src="<?= base_url(); ?>assets/img/pics/client02.png" alt=""/></div>
-                        <div class="owl-item"><img src="<?= base_url(); ?>assets/img/pics/client03.png" alt=""/></div>
-                        <div class="owl-item"><img src="<?= base_url(); ?>assets/img/pics/client04.png" alt=""/></div>
-                        <div class="owl-item"><img src="<?= base_url(); ?>assets/img/pics/client05.png" alt=""/></div>
-                        <div class="owl-item"><img src="<?= base_url(); ?>assets/img/pics/client06.png" alt=""/></div>
-                    </div><!-- .owl-carousel.owl-carousel-navigation end -->
-                </div><!-- .carousel-container end -->
-            </div><!-- .col-md-12 end -->
         </div><!-- .row end -->
     </div><!-- .container end -->
 </div>

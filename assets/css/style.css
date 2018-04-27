@@ -452,7 +452,7 @@ a.download-link span i{
 }
 
 #search {
-    width: 90px;
+    width: 50px;
     min-height: 80px;
     position: relative;
     cursor: pointer;
@@ -537,7 +537,7 @@ a.download-link span i{
 }
 
 .navbar{
-    min-height: 80px;
+    min-height: 50px;
     margin-bottom: 0;
 }
 
@@ -1155,7 +1155,7 @@ a.download-link span i{
 }
 
 .custom-col-padding-both{
-    padding: 120px 70px;
+    padding: 93px 70px;
 }
 
 .custom-col-padding-bottom{
@@ -1208,7 +1208,7 @@ a.download-link span i{
 }
 
 .page-content.parallax{
-    padding-top: 30px;
+    padding-top: 12px;
     padding-bottom: 0px;
     background-attachment: fixed;
     background-repeat: no-repeat;

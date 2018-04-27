@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" >
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" > -->
 <link href="<?= base_url(); ?>assets/css/smart_wizard.css" rel="stylesheet" type="text/css" />        
 <link href="<?= base_url(); ?>assets/css/smart_wizard_theme_dots.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap-tagsinput.css">
@@ -8,6 +8,40 @@
 h1, h2 {
     font-weight: 800;
     margin-top: 0    
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;    
+    border-radius: 0;
+}
+
+.btn-default {
+    text-shadow: 0 1px 0 #fff;
+    background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: -o-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#e0e0e0));
+    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #dbdbdb;
+    border-color: #ccc;
 }
 .navbar-nav>li>a {        
    line-height: 48px; 
@@ -147,7 +181,10 @@ h1, h2 {
                             </li>
                             <li class="menu-item">
                                 <a href="<?= base_url('setting/pengajuan') ?>">Daftar Pengajuan</a>
-                            </li>                            
+                            </li>                    
+                            <li class="menu-item">
+                                <a href="<?= base_url('setting/upload') ?>">Upload Sign Document</a>
+                            </li>             
                             <li class="menu-item current-menu-item">
                                 <a href="#kontak" class="click">Keluar</a>
                             </li>
@@ -751,7 +788,7 @@ h1, h2 {
         </div>
     </div>
 </div>
-<script src="<?= base_url(); ?>assets/js/jquery-2.1.4.min.js"></script>
+<script src="<?= base_url(); ?>assets/js/jquery-2.2.3.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/jquery.price_format.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/dropzone.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/lightbox.js"></script>
@@ -848,8 +885,7 @@ h1, h2 {
                         }
                     });
                 })                          
-            });    
-
+            });                
             $.get('<?php echo base_url(); ?>setting/find_sertifikat/'+ $("#idIklan").val(), function(data) {
                 $("#list-sertifikat").html('');
                 $("#list-sertifikat").html(data.tabel);                         

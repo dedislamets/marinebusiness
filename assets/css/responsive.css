@@ -901,7 +901,7 @@ All this is done for any sub-level being entered.
     
     .header-wrapper{
         position: initial;
-        padding-bottom: 15px;
+        padding-bottom: 5px;
     }
 
     .header-style01 #quick-links li,
@@ -1033,7 +1033,7 @@ All this is done for any sub-level being entered.
         PAGE CONTENT STYLING
         --------------------------------------------------------------------- */
     .page-content.parallax{
-        padding-top: 50px;
+        /*padding-top: 50px;*/
         padding-bottom: 20px;
     }
 

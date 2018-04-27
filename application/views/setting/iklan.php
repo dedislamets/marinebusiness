@@ -137,7 +137,13 @@
                             </li>
                             <li class="menu-item">
                                 <a href="<?= base_url('setting/pengajuan') ?>">Daftar Pengajuan</a>
-                            </li>                      
+                            </li>              
+                            <li class="menu-item">
+                                <a href="<?= base_url('setting/upload') ?>">Upload Sign Document</a>
+                            </li>     
+                            <li class="menu-item">
+                                <a href="<?= base_url('setting/calendar') ?>">Schedule Meet Up</a>
+                            </li>             
                             <li class="menu-item current-menu-item">
                                 <a href="#kontak" class="click">Keluar</a>
                             </li>

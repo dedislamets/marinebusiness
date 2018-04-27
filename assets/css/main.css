@@ -2,6 +2,9 @@
   .logo-m {
       display: none;
   } 
+  .logo-deks {
+      display: none;
+  } 
 
 }
 
@@ -673,7 +676,7 @@ button.close {
   background-color: rgba(0,0,0,0.8);;  
 }
 .app-download {
-    background-image: url(../img/app-preview.png);
+    background-image: url(../img/app-preview-marine.png);
     background-size: cover;
     min-height: 400px;
     width: 100%;
@@ -832,7 +835,7 @@ p {
     padding: 10px;
 }
 .row, .y-header_form {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 }
 
 .y-form > div.col-lg-4 > div i {

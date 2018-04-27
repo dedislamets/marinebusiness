@@ -8,6 +8,8 @@ class Register extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Registrasi');
 		$this->load->model('Pengaturan');
+        $this->load->model('Email');
+
 		// $this->load->library('m_pdf');
 	}
 	public function index()
@@ -27,6 +29,7 @@ class Register extends CI_Controller {
 
 		$this->db->insert('t_registrasi', $data);
 		$this->Pengaturan->sendMail($this->input->post('email'));
+		//$this->Email->sendPhpMail($this->input->post('email'), 'Verifikasi Akun Anda Sekaran', 'body');
 
 		$response = array(
 					'error' => false 

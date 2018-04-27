@@ -79,7 +79,13 @@
                             </li>
                             <li class="menu-item">
                                 <a href="<?= base_url('setting/pengajuan') ?>">Daftar Pengajuan</a>
-                            </li>                          
+                            </li>
+                            <li class="menu-item">
+                                <a href="<?= base_url('setting/upload') ?>">Upload Sign Document</a>
+                            </li>                 
+                            <li class="menu-item">
+                                <a href="<?= base_url('setting/calendar') ?>">Schedule Meet Up</a>
+                            </li>              
                             <li class="menu-item">
                                 <a href="#kontak" class="click">Keluar</a>
                             </li>
@@ -93,7 +99,7 @@
                             <ul class="nav nav-tabs">
                                 <li class="active mov" id="biodata"><a href="#tab1default" data-toggle="tab">Data Diri</a></li>
                                 <li id="doc" class="mov"><a href="#tab2default" data-toggle="tab">Unggah Dokumen</a></li>
-                                <li id="rekening" class="mov"><a href="#tab3default" data-toggle="tab">Rekening Bank</a></li> 
+                                <li id="rekening" class="mov"><a href="#tab3default" data-toggle="tab">Rekening</a></li> 
                             </ul>
                     </div>
                     <div class="panel-body">

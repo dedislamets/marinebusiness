@@ -15,7 +15,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Stylesheets -->
         
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
-        <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css"/>
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css"/> -->
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="<?= base_url(); ?>assets/masterslider/style/masterslider.css" /><!-- Master slider css -->
         <link rel="stylesheet" href="<?= base_url(); ?>assets/masterslider/skins/default/style.css" /><!-- Master slider default skin -->
         <link rel="stylesheet" href="<?= base_url(); ?>assets/css/animate.css"/><!-- animations -->
@@ -25,8 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url(); ?>assets/css/retina.css"/><!-- retina ready styles -->
         <link rel="stylesheet" href="<?= base_url(); ?>assets/css/responsive.css"/><!-- responsive styles -->
         <link rel="stylesheet" href="<?= base_url(); ?>assets/css/datepicker3.css"/>
+        <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap-datetimepicker.min.css"/>        
         <link rel="stylesheet" href="<?= base_url(); ?>assets/css/dropzone.min.css">
         <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap-table.min.css">
+
 
         <!-- Google Web fonts -->
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
@@ -296,7 +299,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                           </li>
                                                           <li>
                                                             <a href="#">
-                                                              <i class="fa fa-user text-red"></i> You changed your username
+                                                              <i class="fa fa-user text-red"></i> You d your username
                                                             </a>
                                                           </li>
                                                         </ul>
@@ -371,10 +374,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <form action="#" method="get">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                                 <i class="fa fa-bell-o notif lonceng"></i>&nbsp;&nbsp;
-                                                <span class="label label-warning lonceng" style="top: 3px;right: 53px;">10</span>
+                                                <span class="label label-warning lonceng" style="top: 3px;">10</span>
                                                 <a>                                                
-                                                <input class="search-submit" type="submit" />
-                                                <input id="m_search" name="s" type="text" placeholder="Type and hit enter..." />                        
+                                                                      
                                             </form>
                                         </div><!-- #search end -->
                                     </div><!-- MAIN NAVIGATION END -->
@@ -429,11 +431,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
 
                                 <ul>
-                                    <li><a href="about01.html">About us</a></li>
-                                    <li><a href="company-history.html">Company history</a></li>
-                                    <li><a href="events.html">Company Events</a></li>
-                                    <li><a href="supply-chain-management.html">Supply chain management</a></li>
-                                    <li><a href="warehousing.html">Warehousing</a></li>                                   
+                                    <li><a href="about01.html">Profile</a></li>
+                                    <li><a href="company-history.html">Tracking</a></li>
+                                    <li><a href="events.html">Bantuan</a></li>                      
                                 </ul>
                             </li><!-- .widget-pages end -->
                         </ul><!-- .col-md-3.footer-widget-container end -->
@@ -442,15 +442,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <!-- .widget-pages start -->
                             <li class="widget widget_pages">
                                 <div class="title">
-                                    <h3>Industry solutions</h3>
+                                    <h3>Link</h3>
                                 </div>
 
                                 <ul>
-                                    <li><a href="overland-transportation.html">Overland transportation</a></li>
-                                    <li><a href="air-freight.html">Air freight</a></li>
-                                    <li><a href="ocean-freight.html">Ocean freight</a></li>
-                                    <li><a href="large-projects.html">Large projects</a></li>
-                                    <li><a href="rail-transportation.html">Rail international shipping</a></li>
+                                    <li><a href="https://www.bmkg.go.id/">Badan Meteorologi, Klimatologi dan Geofisika</a></li>
+                                    <li><a href="http://www.dephub.go.id/">Kementrian Perhubungan</a></li>
+                                    <li><a href="http://www.beacukai.go.id/">Direktorat Jendral Bea Cukai</a></li>
+                                    <li><a href="http://www.pajak.go.id/">Pajak</a></li>
+                                    <li><a href="https://www.pelindo.co.id">Pelindo</a></li>
                                 </ul>
                             </li><!-- .widget-pages end -->
                         </ul><!-- .col-md-3.footer-widget-container end -->
@@ -460,19 +460,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div class="title">
                                     <h3>contact us</h3>
                                 </div>
-
-                                <address>
-                                    Komplek Ruko Marakash Square<br>
-                                    Blok-E.10 No.9 Kab.Bekasi – Indonesia,
-                                </address>
-
-                                <span class="text-big">
-                                    021-88387229
-                                </span>
-                                <br />
-
-                                <a href="mailto:">operation@jmmaritim.com</a>
-                                <br />
+                                
                                 <ul class="footer-social-icons">
                                     <li><a href="#" class="fa fa-facebook"></a></li>
                                     <li><a href="#" class="fa fa-twitter"></a></li>
@@ -489,7 +477,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div><!-- #footer-wrapper end -->
 
         <script src="<?= base_url(); ?>assets/js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="<?= base_url(); ?>assets/js/moment.min.js"></script>
+        
         <script src="<?= base_url(); ?>assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="<?= base_url(); ?>assets/js/bootstrap-datepicker2.js"></script>
         <script src="<?= base_url(); ?>assets/js/datatables/jquery.dataTables.min.js"></script>
         <script src="<?= base_url(); ?>assets/js/datatables/dataTables.bootstrap.min.js"></script>
         <script src="<?= base_url(); ?>assets/js/jquery.validate.min.js"></script>
@@ -511,11 +502,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url(); ?>assets/js/validator.min.js"></script>
         <script src="<?= base_url(); ?>assets/js/jquery.validate.min.js"></script>
 		<script src="<?= base_url(); ?>assets/js/jquery.smartWizard.min.js"></script>
-		<script src="<?= base_url(); ?>assets/js/bootstrap-datepicker.js"></script>
+		
 		<script src="<?= base_url(); ?>assets/js/jquery.gritter.min.js"></script>		
 		<script src="<?= base_url(); ?>assets/js/jquery.price_format.min.js"></script>
         <script src="<?= base_url(); ?>assets/js/bootstrap-tagsinput.js"></script>
         <script src="<?= base_url(); ?>assets/js/thickbox.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="<?= base_url(); ?>assets/daterangepicker/moment.js"></script>
+
+        <script src="<?= base_url(); ?>assets/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="<?= base_url(); ?>assets/calendar/calendar.js"></script>
+
+
+        <!-- <script src="<?= base_url(); ?>assets/js/gcal.min.js"></script> -->
         <!-- <script src="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css"></script> -->
         <!-- 
         <script src="<?= base_url(); ?>assets/js/locale/bootstrap-table-id-ID.min.js"></script>
@@ -540,10 +540,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		            $(this).wrap("<span class='select-wrapper'></span>");
 		            $(this).after("<span class='holder'></span>");
 		        });
-		        $(".custom-select").change(function(){
-		            var selectedOption = $(this).find(":selected").text();
-		            $(this).next(".holder").text(selectedOption);
-		        }).trigger('change');
+		        // $(".custom-select").(function(){
+		        //     var selectedOption = $(this).find(":selected").text();
+		        //     $(this).next(".holder").text(selectedOption);
+		        // }).trigger('');
 
                 function equalHeight() {
                     $('.page-content.column-img-bkg *[class*="custom-col-padding"]').each(function () {
@@ -700,6 +700,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                // minViewMode: "years",
 	                format: 'yyyy-mm-dd'
 	            });
+
+                $('#datetimepicker1').datetimepicker({
+                    format: 'DD-MM-YYYY HH:mm',
+                    icons: {
+                        time: "fa fa-clock-o",
+                        date: "fa fa-calendar",
+                        up: "fa fa-arrow-up",
+                        down: "fa fa-arrow-down"
+                    }
+                });
+                $('#datetimepicker2').datetimepicker({
+                    format: 'DD-MM-YYYY HH:mm',
+                    icons: {
+                        time: "fa fa-clock-o",
+                        date: "fa fa-calendar",
+                        up: "fa fa-arrow-up",
+                        down: "fa fa-arrow-down"
+                    }
+                });
 	            
 	            var btnFinish = $('<button></button>').text('Finish')
 	                                             .addClass('btn btn-info hidden')
