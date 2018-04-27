@@ -75,14 +75,14 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	// 'hostname' => 'localhost',
-	// 'username' => 'mart4343_root',
-	// 'password' => 'Admin123^',
-	// 'database' => 'mart4343_marinebusiness',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'marinebusiness',
+	'username' => 'mart4343_root',
+	'password' => 'Admin123^',
+	'database' => 'mart4343_marinebusiness',
+	// 'hostname' => 'localhost',
+	// 'username' => 'root',
+	// 'password' => '',
+	// 'database' => 'marinebusiness',
 	
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
